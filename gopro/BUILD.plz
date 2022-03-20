@@ -1,0 +1,19 @@
+github_repo(
+    name = "pleasings2",
+    repo = "sagikazarmark/mypleasings",
+    revision = f"{CONFIG.PLEASINGS2_VERSION}",
+)
+
+github_repo(
+    name = "pleasings",
+    repo = "thought-machine/pleasings",
+    revision = "master",
+)
+
+
+go_binary(
+    name = "gopro",
+    srcs = glob(["*.go"], exclude = ["*_test.go"]),
+    visibility = ["//..."],
+    deps = ["//third_party/go:github.com__gofiber__fiber__v2"],
+)

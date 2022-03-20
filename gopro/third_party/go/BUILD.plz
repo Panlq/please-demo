@@ -1,0 +1,379 @@
+go_mod_download(
+    name = "github.com__andybalholm__brotli",
+    _tag = "download",
+    module = "github.com/andybalholm/brotli",
+    version = "v1.0.4",
+)
+
+go_module(
+    name = "github.com__andybalholm__brotli",
+    download = ":_github.com__andybalholm__brotli#download",
+    install = ["."],
+    module = "github.com/andybalholm/brotli",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_mod_download(
+    name = "github.com__gofiber__fiber__v2",
+    _tag = "download",
+    module = "github.com/gofiber/fiber/v2",
+    version = "v2.29.0",
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["."],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__bytebufferpool",
+        ":github.com__gofiber__fiber__v2__internal__colorable",
+        ":github.com__gofiber__fiber__v2__internal__dictpool",
+        ":github.com__gofiber__fiber__v2__internal__go-json",
+        ":github.com__gofiber__fiber__v2__internal__go-json__errors",
+        ":github.com__gofiber__fiber__v2__internal__isatty",
+        ":github.com__gofiber__fiber__v2__internal__schema",
+        ":github.com__gofiber__fiber__v2__utils",
+        ":github.com__valyala__fasthttp",
+        ":github.com__valyala__fasthttp__reuseport",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__bytebufferpool",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/bytebufferpool"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__colorable",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/colorable"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__gofiber__fiber__v2__internal__isatty"],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__dictpool",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/dictpool"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__msgp",
+        ":github.com__gofiber__fiber__v2__utils",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__fwd",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/fwd"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__decoder",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_color",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_color_indent",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_indent",
+        ":github.com__gofiber__fiber__v2__internal__go-json__errors",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__decoder",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/decoder"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__errors",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__encoder",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/encoder"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__errors",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__encoder__vm",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/encoder/vm"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_indent",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_color",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/encoder/vm_color"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_color_indent",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_color_indent",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/encoder/vm_color_indent"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_indent",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/encoder/vm_indent"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder",
+        ":github.com__gofiber__fiber__v2__internal__go-json__encoder__vm_color",
+        ":github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    ],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__errors",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/errors"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__go-json__runtime",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/go-json/runtime"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__isatty",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/isatty"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [":golang.org__x__sys__unix"],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__msgp",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/msgp"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__gofiber__fiber__v2__internal__fwd"],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__schema",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/schema"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__internal__uuid",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["internal/uuid"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__gofiber__fiber__v2__utils",
+    download = ":_github.com__gofiber__fiber__v2#download",
+    install = ["utils"],
+    module = "github.com/gofiber/fiber/v2",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__gofiber__fiber__v2__internal__uuid"],
+)
+
+go_mod_download(
+    name = "github.com__klauspost__compress",
+    _tag = "download",
+    module = "github.com/klauspost/compress",
+    version = "v1.15.0",
+)
+
+go_module(
+    name = "github.com__klauspost__compress__flate",
+    download = ":_github.com__klauspost__compress#download",
+    install = ["flate"],
+    module = "github.com/klauspost/compress",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__klauspost__compress__gzip",
+    download = ":_github.com__klauspost__compress#download",
+    install = ["gzip"],
+    module = "github.com/klauspost/compress",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__klauspost__compress__flate"],
+)
+
+go_module(
+    name = "github.com__klauspost__compress__zlib",
+    download = ":_github.com__klauspost__compress#download",
+    install = ["zlib"],
+    module = "github.com/klauspost/compress",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__klauspost__compress__flate"],
+)
+
+go_mod_download(
+    name = "github.com__valyala__bytebufferpool",
+    _tag = "download",
+    module = "github.com/valyala/bytebufferpool",
+    version = "v1.0.0",
+)
+
+go_module(
+    name = "github.com__valyala__bytebufferpool",
+    download = ":_github.com__valyala__bytebufferpool#download",
+    install = ["."],
+    module = "github.com/valyala/bytebufferpool",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_mod_download(
+    name = "github.com__valyala__fasthttp",
+    _tag = "download",
+    module = "github.com/valyala/fasthttp",
+    version = "v1.34.0",
+)
+
+go_module(
+    name = "github.com__valyala__fasthttp",
+    download = ":_github.com__valyala__fasthttp#download",
+    install = ["."],
+    module = "github.com/valyala/fasthttp",
+    visibility = ["PUBLIC"],
+    deps = [
+        ":github.com__andybalholm__brotli",
+        ":github.com__klauspost__compress__flate",
+        ":github.com__klauspost__compress__gzip",
+        ":github.com__klauspost__compress__zlib",
+        ":github.com__valyala__bytebufferpool",
+        ":github.com__valyala__fasthttp__fasthttputil",
+        ":github.com__valyala__fasthttp__stackless",
+    ],
+)
+
+go_module(
+    name = "github.com__valyala__fasthttp__fasthttputil",
+    download = ":_github.com__valyala__fasthttp#download",
+    install = ["fasthttputil"],
+    module = "github.com/valyala/fasthttp",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "github.com__valyala__fasthttp__reuseport",
+    download = ":_github.com__valyala__fasthttp#download",
+    install = ["reuseport"],
+    module = "github.com/valyala/fasthttp",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__valyala__tcplisten"],
+)
+
+go_module(
+    name = "github.com__valyala__fasthttp__stackless",
+    download = ":_github.com__valyala__fasthttp#download",
+    install = ["stackless"],
+    module = "github.com/valyala/fasthttp",
+    visibility = ["PUBLIC"],
+    deps = [":github.com__valyala__bytebufferpool"],
+)
+
+go_mod_download(
+    name = "github.com__valyala__tcplisten",
+    _tag = "download",
+    module = "github.com/valyala/tcplisten",
+    version = "v1.0.0",
+)
+
+go_module(
+    name = "github.com__valyala__tcplisten",
+    download = ":_github.com__valyala__tcplisten#download",
+    install = ["."],
+    module = "github.com/valyala/tcplisten",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_mod_download(
+    name = "golang.org__x__sys",
+    _tag = "download",
+    module = "golang.org/x/sys",
+    version = "v0.0.0-20220227234510-4e6760a101f9",
+)
+
+go_module(
+    name = "golang.org__x__sys__internal__unsafeheader",
+    download = ":_golang.org__x__sys#download",
+    install = ["internal/unsafeheader"],
+    module = "golang.org/x/sys",
+    visibility = ["PUBLIC"],
+    deps = [],
+)
+
+go_module(
+    name = "golang.org__x__sys__unix",
+    download = ":_golang.org__x__sys#download",
+    install = ["unix"],
+    module = "golang.org/x/sys",
+    visibility = ["PUBLIC"],
+    deps = [":golang.org__x__sys__internal__unsafeheader"],
+)
