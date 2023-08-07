@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gopro/simple"
+	"github/panlq-github/please-demo/simple"
 )
 
 func main() {

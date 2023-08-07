@@ -1,0 +1,29 @@
+---
+
+version: v1
+
+plugins: 
+  # The name of the plugin.
+  # Required.
+  # By default, buf generate will look for a binary named
+  # protoc-gen-NAME on your $PATH.
+  - name: go
+    # The relative output directory.
+    # Required
+    out: ./api/gen/pb
+
+    # Any options to provide to the plugin.
+    # Optional.
+    # Can be either a string or list of strings.
+    opt: path=source_relative
+
+  - name: validate
+    out: ./api/gen/pb
+    opt: path=source_relative,lang=go
+
+  - name: openapiv2
+    out: ./api/gen/openapi
+
+  - name: twirp
+    out: ./api/gen/pb
+    opt: path=source_relative

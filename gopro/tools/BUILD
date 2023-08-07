@@ -16,6 +16,25 @@ sh_cmd(
     ],
 )
 
+sh_cmd(
+    name = "proto",
+    cmd = [
+        "$(out_exe ///pleasings2//tools/proto:buf) generate",
+    ],
+    deps = [
+        ":openapiv2",
+        "///pleasings2//tools/proto:buf"
+    ]
+)
+
+remote_file(
+    name = "openapiv2",
+    out = "protoc-gen-openapiv2",
+    binary = True,
+    exported_files = [f"protoc-gen-openapiv2-v2.11.2-{CONFIG.HOSTOS}-{CONFIG.HOSTARCH}"],
+    url = f"https://github.com/grpc-ecosystem/grpc-gateway/releases/download/v2.11.2/protoc-gen-openapiv2-v2.11.2-{CONFIG.HOSTOS}-{CONFIG.HOSTARCH}",
+)
+
 HOME = "Users/jonpan"
 remote_file(
     name = "godeps",

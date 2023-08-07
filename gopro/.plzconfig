@@ -9,7 +9,7 @@
 ; version = 16.19.0
 
 [go]
-importpath = gopro
+importpath = github/panlq-github/please-demo
 GoTestRootCompat = true
 
 [buildenv]
@@ -25,6 +25,9 @@ path = /Users/jonpan/.g/go/bin:/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin
 wollemi-version = 0.7.0
 pleasings2-version= 502d7fc5487b0904a78c60b5f645dd4642298211
 
+[alias "proto"]
+desc = Generate protobuf 
+cmd = run //tools:proto -- 
 
 [alias "godeps"]
 desc = Generate third-party dependency rules for a Go project

@@ -1,4 +1,4 @@
-module gopro
+module github/panlq-github/please-demo
 
 go 1.17
 
